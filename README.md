@@ -1,5 +1,5 @@
 # SynthEtic Australian WEathEr Data Generator - seaweed
-Seaweed R package is a synthetic Australian weather data generator that approximates monthly weather conditions at ten of Australia's most well known locations. Weather conditions, as labels, are estimated through probabilistic Markov Chains learnt from historical patterns. Temperature, pressure and humidity are estimated by random sampling monthly probability density functions derived from the historical measurements at each location.
+Seaweed is an R package that generates synthetic Australian weather data. Seaweed approximates monthly weather conditions at ten of Australia's most well known locations. Weather conditions, as labels, are estimated through probabilistic Markov Chains learnt from historical patterns. Temperature, pressure and humidity are estimated through a random sampling of  monthly probability density functions derived from the historical measurements at each location.
 
 ## Installation
 Seaweed was developed using R version 3.3.1 (2016-06-21) -- "Bug in Your Hair" on an x86_64 Mac running OS X El Capitan Version 10.11.6. The seaweed algorithm was built with the following packages:
@@ -13,7 +13,7 @@ readr (>= 1.0.0),
 weatherData (>= 0.4.5),
 ```
 
-They should be installed using RStudio by executing the sequence of commands shown below one line at a time:
+They should be installed through an R console and by executing the sequence of commands shown below one line at a time:
 
 ```r
 install.packages("devtools")
@@ -23,14 +23,14 @@ install.packages("markovchain")
 install.packages("readr")
 devtools::install_github("Ram-N/weatherData")
 ```
-After successfully satisfying the above package dependancies, execute the following in R to install the seaweed package:
+After successfully satisfying the above package dependancies, execute the following to install the seaweed package:
 
 ```r
 devtools::install_github("qubz/seaweed")
 ```
 ## Example
 
-Once the seaweed is installed, copy and paste the code below into your favorite R tool. Make sure you __change the path__ in ```write_delim``` to a suitable location __before you run the code__.
+Once seaweed is installed, copy and paste the code below into your favorite R tool. Make sure you __change the path__ in ```write_delim``` to a suitable location __before you run the code__.
 
 ```r
 library(seaweed)
@@ -46,7 +46,7 @@ write_delim(dt, "<your own path>/syntheic_weather_data.dat",
             delim = "|",
             col_names = F)
 ```
-The file created will contain a synthetic Australian weather dataset similar to the sample shown below -
+The file created will contain a dataset of synthetic Australian weather similar to the sample shown below -
 ```r
 ADL|-34.57,138.31,4|2016-01-01T22:48:44Z|Sunny|19.9|1011.8|35
 ASP|-23.48,133.54,541|2016-01-01T00:08:16Z|Cloudy|28.9|1013.1|27
@@ -60,7 +60,9 @@ PER|-31.56,115.59,13|2016-01-01T16:26:05Z|Sunny|23.9|1012.2|55
 SYD|-33.57,151.10,3|2016-01-01T13:48:08Z|Cloudy|24.8|1017.8|68
 ```
 ## Testing, Documentation and Final Words
-The code was tested using Hadley Wickham's ```testthat``` R package. To re-execute test cases, download the source and refer to the instructions here - http://r-pkgs.had.co.nz/tests.html
-Documentation for package functions are available through the Help tab of RStudio and in the source itself.
+The code was tested using Hadley Wickham's ```testthat``` R package. To re-execute test cases, clone or download the repo  and refer to the instructions here - http://r-pkgs.had.co.nz/tests.html
+Documentation for package functions are available through the Help tab of RStudio and within the source itself.
 
 海藻はおいしいです
+## License
+© Matthew Browne, 2016. Licensed under an Apache-2 license.
