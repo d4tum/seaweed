@@ -2,7 +2,7 @@
 % Please edit documentation in R/0-get_historical_weather.R
 \name{get_weather}
 \alias{get_weather}
-\title{Get historical weather station data for ten locations around Australia.}
+\title{Get historical weather data}
 \usage{
 get_weather(m, download)
 }
@@ -15,10 +15,14 @@ get_weather(m, download)
 A \code{data.table} containing \code{m} months of historical weather data
 }
 \description{
-Get historical weather station data for ten locations around Australia.
+Returns historical weather station data for ten locations around Australia.
 }
 \details{
 The data is fetched fetched through an API provided by \url{www.wunderground.com}.
+When download is FALSE, \code{get_weather} reads from a local package datas file. The file
+contains 12 months and 'm' will select 'n' months starting from the first month in the data.
+When download is TRUE, the online API is called and fresh data is downloaded. In this
+instance, 'm' will download 'n' months in the past. The first of which is the last month.
 
 NOTE: Trying to retrieve more that 1 years data where 'm' > 12 may fail.
 

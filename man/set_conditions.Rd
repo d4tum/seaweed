@@ -2,7 +2,7 @@
 % Please edit documentation in R/1-define_conditions.R
 \name{set_conditions}
 \alias{set_conditions}
-\title{Define daily weather conditions from rules applied to historical weather data.}
+\title{Define weather conditions}
 \usage{
 set_conditions(dt)
 }
@@ -14,7 +14,7 @@ A \code{data.table} of all the input data including 4 extra variables -
 \code{year}, \code{month}, \code{day} and \code{condition}
 }
 \description{
-Define daily weather conditions from rules applied to historical weather data.
+Defines daily weather conditions from rules applied to historical weather data.
 }
 \details{
 Rules to determine weather condition are based on commonsense and are

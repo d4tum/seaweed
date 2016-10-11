@@ -2,7 +2,7 @@
 % Please edit documentation in R/4-format_output.R
 \name{format_output}
 \alias{format_output}
-\title{Format sawdata according to specification}
+\title{Tidy output for pretty printing}
 \usage{
 format_output(dt)
 }
@@ -13,7 +13,7 @@ format_output(dt)
 A \code{data.table} formatted according to the specifications in details
 }
 \description{
-Format sawdata according to specification
+Format seaweed data according to specifications
 }
 \details{
 Synthetic Australian weather data is fromatted as such:

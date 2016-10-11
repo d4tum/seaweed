@@ -2,7 +2,7 @@
 % Please edit documentation in R/2-fit_models.R
 \name{compute_pdfs}
 \alias{compute_pdfs}
-\title{Calculate probability density functions of numeric weather characteristics}
+\title{Calculates probabilities for numeric variables}
 \usage{
 compute_pdfs(dt)
 }

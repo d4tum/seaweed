@@ -1,4 +1,4 @@
-#' @title Fits markov chains and build conditions
+#' @title Fits markov chains and builds conditions
 #' @description Fit and create markov chains for daily weather station conditions
 #' @param dt A \code{data.table} created by the function \code{\link{set_conditions}}
 #' @return The input \code{data.table} with an extra variable 'mcs' a markov chain sequence of

@@ -2,7 +2,7 @@
 % Please edit documentation in R/2-fit_models.R
 \name{create_markovchains}
 \alias{create_markovchains}
-\title{Fit and create markov chains for daily weather station conditions}
+\title{Fits markov chains and build conditions}
 \usage{
 create_markovchains(dt)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/3-compute_numerics.R
 \name{generate_metrics}
 \alias{generate_metrics}
-\title{Pick daily temperature, pressure and humidity from a normal distribution}
+\title{Random sampling from statistical models}
 \usage{
 generate_metrics(dt, pdfs)
 }
