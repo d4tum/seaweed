@@ -14,7 +14,7 @@ readr (>= 1.0.0),
 weatherData (>= 0.4.5),
 ```
 
-They should be installed through an R console and by executing the sequence of commands shown below one line at a time:
+They should be installed through an R console executing the following sequence of commands one line at a time:
 
 ```r
 install.packages("devtools")
