@@ -5,6 +5,7 @@ Seaweed is an R package that generates plausible and 'semi-realistic' synthetic 
 Seaweed was developed using R version 3.3.1 (2016-06-21) -- "Bug in Your Hair" on an x86_64 Mac running OS X El Capitan Version 10.11.6. The seaweed algorithm was built with the following packages:
 
 ```r
+curl (>= 2.1),
 data.table (>= 1.9.7),
 devtools (>= 1.12.0),
 lubridate (>= 1.6.0),
@@ -18,6 +19,7 @@ They should be installed through an R console and by executing the sequence of c
 ```r
 install.packages("devtools")
 install.packages("data.table", type = "source", repos = "http://Rdatatable.github.io/data.table")
+install.packages("curl")
 install.packages("lubridate")
 install.packages("markovchain")
 install.packages("readr")
