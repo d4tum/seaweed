@@ -1,5 +1,5 @@
 # SynthEtic Australian WEathEr Data Generator - seaweed
-Seaweed is an R package that generates plausible and 'semi-realistic' synthetic weather data. Seaweed approximates monthly weather conditions at ten of Australia's most well known locations. Weather conditions are estimated through Markov Chain models learnt from sequences within historical data. Temperature, pressure and humidity are estimated through the random sampling using a statistical model of the probable ranges for monthly weather conditions at each location.
+Seaweed is an R package that generates plausible and 'semi-realistic' synthetic weather data. Seaweed approximates monthly weather conditions at ten well known Australian locations. Weather conditions are estimated through Markov Chain models learnt from sequences within historical data. Temperature, pressure and humidity are estimated through random sampling using a statistical model of the probable ranges of monthly weather conditions at each location.
 
 ## Installation
 Seaweed was developed using R version 3.3.1 (2016-06-21) -- "Bug in Your Hair" on an x86_64 Mac running OS X El Capitan Version 10.11.6. The seaweed algorithm was built with the following packages:
