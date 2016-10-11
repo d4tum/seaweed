@@ -1,0 +1,32 @@
+Package: seaweed
+Type: Package
+Title: SynthEtic Australian WEathEr Data Generator
+Version: 0.1.0
+Author: Matthew Browne
+Maintainer: Matthew Browne <odbgza@gmail.com>
+Description: Sawdagen generates weather data for weather stations located
+    at 12 major Australian airports. A monthly weather condition Markov Chain is
+    learnt for each station from 1 years worth of historical weather data downloaded
+    through the weatherunderground.com API. Daily temperature, pressure and humidity are
+    modelled through a random sample drawn from monthly weather condition probability
+    distributions measured at each station. These data are then projected onto
+    stations through their monthly conditions at a daily level determined by the
+    Markov Chain.
+Suggests:
+    testthat
+Depends:
+    R (>= 3.1),
+    weatherData (>= 0.4.5),
+    data.table (>= 1.9.7),
+    lubridate (>= 1.6.0),
+    markovchain (>= 0.6.5.1),
+    readr (>= 1.0.0)
+Imports:
+    weatherData (>= 0.4.5),
+    data.table (>= 1.9.7),
+    lubridate (>= 1.6.0),
+    markovchain (>= 0.6.5.1),
+    readr (>= 1.0.0)
+License: Apache License (== 2.0) | file LICENSE
+LazyData: true
+RoxygenNote: 5.0.1.9000
