@@ -1,5 +1,5 @@
-#' Define daily weather conditions from rules applied to historical weather data.
-#'
+#' @title Define weather conditions
+#' @description Defines daily weather conditions from rules applied to historical weather data.
 #' @param dt A \code{data.table} created by the function \code{\link{get_weather}}
 #' @return A \code{data.table} of all the input data including 4 extra variables -
 #' \code{year}, \code{month}, \code{day} and \code{condition}

@@ -1,5 +1,5 @@
-#' Fit and create markov chains for daily weather station conditions
-#'
+#' @title Fits markov chains and build conditions
+#' @description Fit and create markov chains for daily weather station conditions
 #' @param dt A \code{data.table} created by the function \code{\link{set_conditions}}
 #' @return The input \code{data.table} with an extra variable 'mcs' a markov chain sequence of
 #' weather conditions
@@ -43,8 +43,8 @@ create_markovchains <- function(dt) {
   dt
 }
 
-#' Calculate probability density functions of numeric weather characteristics
-#'
+#' @title Calculates probabilities for numeric variables
+#' @description Calculate probability density functions of numeric weather characteristics
 #' @param dt A \code{data.table} created by the function \code{\link{create_markovchains}}
 #' @return A \code{data.table} of calculated means and standard deviations
 #' @details Means and standard deviations are calculated for each weather condition's

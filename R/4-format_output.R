@@ -1,5 +1,5 @@
-#' Format sawdata according to specification
-#'
+#' @title Tidy output for pretty printing
+#' @description Format seaweed data according to specifications
 #' @param dt A \code{data.table} created by the function \code{\link{generate_metrics}}
 #' @return A \code{data.table} formatted according to the specifications in details
 #' @details Synthetic Australian weather data is fromatted as such:
@@ -92,10 +92,3 @@ format_output <- function(dt) {
   rm(list = setdiff(ls(), c("out")))
   out
 }
-# Save final dataset to file
-# save(out, file = "data/04_synawegen_final_dataset.rda")
-# Write out to psv file
-# write_delim(out,
-#             "data/weather_data.dat",
-#             delim = "|",
-#             col_names = F)

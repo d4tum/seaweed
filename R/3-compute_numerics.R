@@ -1,5 +1,5 @@
-#' Pick daily temperature, pressure and humidity from a normal distribution
-#'
+#' @title Random sampling from statistical models
+#' @description  Pick daily temperature, pressure and humidity from a normal distribution
 #' @param dt A \code{data.table} created by the function \code{\link{create_markovchains}}
 #' @param pdfs A \code{data.table} created by the function \code{\link{compute_pdfs}}
 #' @return A \code{data.table} with temperature, pressure and humidity calculated
