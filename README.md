@@ -25,7 +25,7 @@ install.packages("markovchain")
 install.packages("readr")
 devtools::install_github("Ram-N/weatherData")
 ```
-After successfully satisfying the above package dependancies, execute the following to install the seaweed package:
+After successfully satisfying the above dependancies, execute the following to install seaweed:
 
 ```r
 devtools::install_github("qubz/seaweed")
