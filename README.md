@@ -25,14 +25,14 @@ install.packages("markovchain")
 install.packages("readr")
 devtools::install_github("Ram-N/weatherData")
 ```
-After successfully satisfying the above dependancies, execute the following to install seaweed:
+After successfully satisfying the above dependencies, execute the following to install seaweed:
 
 ```r
 devtools::install_github("qubz/seaweed")
 ```
 ## Example
 
-Once seaweed is installed, copy and paste the code below into your favorite R tool. Make sure you __change the path__ in ```write_delim``` to a suitable location __before you run the code__.
+Once seaweed is installed, copy and paste the code below into your favourite R tool. Make sure you __change the path__ in ```write_delim``` to a suitable location __before you run the code__.
 
 ```r
 library(seaweed)
@@ -62,7 +62,7 @@ PER|-31.56,115.59,13|2016-01-01T16:26:05Z|Sunny|23.9|1012.2|55
 SYD|-33.57,151.10,3|2016-01-01T13:48:08Z|Cloudy|24.8|1017.8|68
 ```
 ## Testing, Documentation and Final Words
-The code was tested using Hadley Wickham's ```testthat``` R package. To re-execute test cases, clone or download the repo  and refer to the instructions here - http://r-pkgs.had.co.nz/tests.html
+The code was tested using Hadley Wickham's ```testthat``` R package. To re-execute test cases, clone or download the repo and refer to the instructions here - http://r-pkgs.had.co.nz/tests.html. 
 Documentation for package functions are available through the Help tab of RStudio and within the source itself.
 
 海藻はおいしいです
