@@ -29,6 +29,7 @@ Imports:
     lubridate (>= 1.6.0),
     markovchain (>= 0.6.5.1),
     readr (>= 1.0.0)
+Remotes: github::Ram-N/weatherData
 License: Apache License (== 2.0) | file LICENSE
 LazyData: true
 RoxygenNote: 5.0.1.9000
