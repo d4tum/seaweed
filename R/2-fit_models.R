@@ -5,7 +5,6 @@
 #' weather conditions
 #' @details Probabilistic markov chain sequences are learnt from weather conditions
 #' for each month at each station found in the input data.
-#' @examples
 #' @export
 create_markovchains <- function(dt) {
   mcs <- character()

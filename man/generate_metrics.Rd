@@ -23,16 +23,6 @@ Temperature, pressure and humidity are randomly chosen from a normal
 distribution described by the mean and standard deviation (the probability density
 function) for daily weather conditions observed at each station over each month.
 }
-\examples{
-\dontrun{head(generate_metrics(dt, pdfs))}
-station       Date year month day condition temperature pressure humidity
-HBA 2016-09-01 2016     9   1    Cloudy        11.1   1011.8       60
-HBA 2016-09-02 2016     9   2      Rain         9.1   1024.4       75
-HBA 2016-09-03 2016     9   3      Rain        10.0   1002.6       78
-HBA 2016-09-04 2016     9   4      Rain         9.5    994.9       79
-HBA 2016-09-05 2016     9   5     Sunny        10.1   1012.5       51
-HBA 2016-09-06 2016     9   6      Rain        13.7   1002.4       67
-}
 \seealso{
 \code{\link{create_markovchains}} \code{\link{compute_pdfs}}
 }

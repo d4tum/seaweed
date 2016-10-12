@@ -25,16 +25,6 @@ ADL|-34.92,138.62,48|2016-01-03T12:35:37Z|Sunny|+39.4|1114.1|12\cr
 
 A random time component is added to the date variable to align to the specs.
 }
-\examples{
-\dontrun{head(format_output(dt))}
-station          location                 time condition temperature pressure humidity
-ADL   -34.57,138.31,4 2016-09-01T10:09:34Z      Rain        12.1   1021.6       70
-ASP -23.48,133.54,541 2016-09-01T10:16:28Z    Cloudy        21.7   1014.8       43
-BNE   -27.23,153.08,5 2016-09-01T18:50:40Z     Sunny        19.1   1013.0       54
-CBR -35.17,149.10,577 2016-09-01T13:40:24Z      Rain        10.1   1012.2       78
-CNS   -16.52,145.45,7 2016-09-01T21:33:33Z      Rain        22.7   1010.4       74
-DRW  -12.25,130.54,30 2016-09-01T08:46:37Z     Sunny        28.9   1010.1       51
-}
 \seealso{
 \code{\link{create_markovchains}} \code{\link{compute_pdfs}}
 }

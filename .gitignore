@@ -12,7 +12,7 @@
 
 # RStudio files
 .Rproj.user
-seaweed.Rproj
+# seaweed.Rproj
 
 # produced vignettes
 vignettes/*.html
