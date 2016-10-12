@@ -1,3 +1,4 @@
+[![Travis-CI Build Status](https://travis-ci.org/qubz/seaweed.svg?branch=master)](https://travis-ci.org/qubz/seaweed)
 # seaweed
 Seaweed is an R package that generates plausible and 'semi-realistic' synthetic weather data. Seaweed approximates monthly weather conditions at ten well known Australian locations. Weather conditions are estimated through Markov Chain models learnt from sequences within historical data. Temperature, pressure and humidity are estimated through random sampling using a statistical model of the probable ranges of monthly weather conditions at each location.
 
