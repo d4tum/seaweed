@@ -6,6 +6,13 @@
 #' @details Probabilistic markov chain sequences are learnt from weather conditions
 #' for each month at each station found in the input data.
 #' @export
+#' @importFrom markovchain createSequenceMatrix
+#' @importFrom markovchain markovchainFit
+#' @importFrom markovchain markovchainSequence
+#' @importFrom data.table data.table
+#' @importFrom data.table :=
+#' @importFrom data.table .BY
+#' @importFrom data.table set
 create_markovchains <- function(dt) {
   mcs <- character()
 
@@ -43,7 +50,11 @@ create_markovchains <- function(dt) {
 #' In the event of no monthly variation, a mertic is imputed from the complete
 #' range of observations.
 #' @export
+#' @importFrom data.table set
+#' @importFrom stats sd
 compute_pdfs <- function(dt) {
+
+
   pdfs <- data.table(
     condition = character(),
     station = character(),

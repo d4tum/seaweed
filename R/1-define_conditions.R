@@ -12,6 +12,11 @@
 #' that are used to model the weather data.
 #' @seealso \code{\link{create_markovchains}} \code{\link{compute_pdfs}}
 #' @export
+#' @importFrom data.table :=
+#' @importFrom lubridate year
+#' @importFrom lubridate month
+#' @importFrom lubridate day
+#' @importFrom lubridate ymd
 set_conditions <- function(dt) {
   # Split out Y M D from Date
   dt[, year := year(ymd(Date))]

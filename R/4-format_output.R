@@ -12,6 +12,8 @@
 #' A random time component is added to the date variable to align to the specs.
 #' @seealso \code{\link{create_markovchains}} \code{\link{compute_pdfs}}
 #' @export
+#' @importFrom data.table data.table
+#' @importFrom stats runif
 format_output <- function(dt) {
   # Add lat/lng and elevation to the data
   location <-

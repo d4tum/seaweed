@@ -16,6 +16,15 @@
 #' and Alice Springs.
 #' @seealso \code{\link{set_conditions}}
 #' @export
+#' @import weatherData
+#' @importFrom data.table fread
+#' @importFrom data.table setDT
+#' @importFrom data.table is.data.table
+#' @importFrom lubridate month
+#' @importFrom lubridate date
+#' @importFrom lubridate rollback
+#' @importFrom curl has_internet
+#' @importFrom weatherData getWeatherForDate
 get_weather <- function(m, download) {
   if (!download) {
     # Use stored raw data previously downloaded
@@ -24,10 +33,10 @@ get_weather <- function(m, download) {
         system.file("extdata", "raw_sample_data.csv", package = "seaweed"),
         stringsAsFactors = FALSE
       )
-    dt <- subset(dt, lubridate::month(lubridate::date(Date)) <= m)
+    dt <- subset(dt, month(date(Date)) <= m)
     dt
 
-  } else if (curl::has_internet()) {
+  } else if (has_internet()) {
     # Download a fresh batch
     # Set up weather station ICAO codes and give them 3 letter IATA names
     station_codes <-

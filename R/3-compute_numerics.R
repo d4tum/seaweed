@@ -9,6 +9,7 @@
 #' function) for daily weather conditions observed at each station over each month.
 #' @seealso \code{\link{create_markovchains}} \code{\link{compute_pdfs}}
 #' @export
+#' @importFrom stats rnorm
 generate_metrics <- function(dt, pdfs) {
   # Clean up the data and remove variables that are not not needed anymore
   dt[, condition := mcs]
