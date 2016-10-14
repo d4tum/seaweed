@@ -15,16 +15,16 @@
 #' Hobart, Melbourne, Canberra, Sydney, Brisbane, Cairns, Darwin, Perth, Adelaide
 #' and Alice Springs.
 #' @seealso \code{\link{set_conditions}}
-#' @examples
-#' \dontrun{head(get_weather(m = 1))}
-#' station       Date Mean_TemperatureC Mean_Humidity Mean_Sea_Level_PressurehPa Precipitationmm CloudCover
-#' HBA 2016-09-01                12            57                       1012            0.51          3
-#' HBA 2016-09-02                 9            76                       1013            0.00          5
-#' HBA 2016-09-03                 8            84                       1005            0.25          5
-#' HBA 2016-09-04                12            52                       1010            0.00          3
-#' HBA 2016-09-05                14            51                       1019            0.00          3
-#' HBA 2016-09-06                14            53                       1022            0.00          4
 #' @export
+#' @import weatherData
+#' @importFrom data.table fread
+#' @importFrom data.table setDT
+#' @importFrom data.table is.data.table
+#' @importFrom lubridate month
+#' @importFrom lubridate date
+#' @importFrom lubridate rollback
+#' @importFrom curl has_internet
+#' @importFrom weatherData getWeatherForDate
 get_weather <- function(m, download) {
   if (!download) {
     # Use stored raw data previously downloaded
@@ -33,10 +33,10 @@ get_weather <- function(m, download) {
         system.file("extdata", "raw_sample_data.csv", package = "seaweed"),
         stringsAsFactors = FALSE
       )
-    dt <- subset(dt, lubridate::month(lubridate::date(Date)) <= m)
+    dt <- subset(dt, month(date(Date)) <= m)
     dt
 
-  } else if (curl::has_internet()) {
+  } else if (has_internet()) {
     # Download a fresh batch
     # Set up weather station ICAO codes and give them 3 letter IATA names
     station_codes <-

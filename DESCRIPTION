@@ -12,23 +12,24 @@ Description: Sawdagen generates weather data for weather stations located
     distributions measured at each station. These data are then projected onto
     stations through their monthly conditions at a daily level determined by the
     Markov Chain.
+URL: https://github.com/qubz/seaweed
+BugReports: https://github.com/qubz/seaweed/issues
 Suggests:
     testthat
 Depends:
-    R (>= 3.1),
-    weatherData (>= 0.4.5),
-    data.table (>= 1.9.7),
-    curl (>= 2.1),
-    lubridate (>= 1.6.0),
-    markovchain (>= 0.6.5.1),
-    readr (>= 1.0.0)
+    R (>= 3.1)
 Imports:
-    weatherData (>= 0.4.5),
-    data.table (>= 1.9.7),
     curl (>= 2.1),
+    data.table (>= 1.9.7),
+    devtools (>= 1.12.0),
     lubridate (>= 1.6.0),
     markovchain (>= 0.6.5.1),
-    readr (>= 1.0.0)
+    readr (>= 1.0.0),
+    stats (>= 3.3.1),
+    weatherData (>= 0.4.5)
+Remotes:
+    Ram-N/weatherData,
+    Rdatatable/data.table
 License: Apache License (== 2.0) | file LICENSE
 LazyData: true
 RoxygenNote: 5.0.1.9000

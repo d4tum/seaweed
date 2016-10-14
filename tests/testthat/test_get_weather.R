@@ -6,7 +6,7 @@ test_that("get_weather's offline local data returns the correct data", {
   # Typeof
   expect_equal(is.data.table(get_weather(1, F)), T)
   # Number of months
-  expect_equal(length(unique(lubridate::month((lubridate::date(get_weather(1, F)[]$Date))))), 1)
+  expect_equal(length(unique(month(date(get_weather(1, F)[]$Date)))), 1)
   # Number of stations
   expect_equal(length(unique(get_weather(1, F)[]$station)), 10)
 })

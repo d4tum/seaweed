@@ -25,16 +25,6 @@ The function splits the \code{Date} "YYYY-MM-DD" into "year", "month" and "day"
 for use in the functions \code{create_markovchains(dt)} and \code{compute_pdfs(dt)}
 that are used to model the weather data.
 }
-\examples{
-\dontrun{head(set_conditions(dt))}
-station       Date Mean_TemperatureC Mean_Humidity Mean_Sea_Level_PressurehPa Precipitationmm CloudCover year month day condition
-HBA 2016-09-01                12            57                       1012            0.51          3 2016     9   1      Rain
-HBA 2016-09-02                 9            76                       1013            0.00          5 2016     9   2    Cloudy
-HBA 2016-09-03                 8            84                       1005            0.25          5 2016     9   3      Rain
-HBA 2016-09-04                12            52                       1010            0.00          3 2016     9   4     Sunny
-HBA 2016-09-05                14            51                       1019            0.00          3 2016     9   5     Sunny
-HBA 2016-09-06                14            53                       1022            0.00          4 2016     9   6    Cloudy
-}
 \seealso{
 \code{\link{create_markovchains}} \code{\link{compute_pdfs}}
 }

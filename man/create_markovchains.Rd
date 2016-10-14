@@ -20,14 +20,4 @@ Fit and create markov chains for daily weather station conditions
 Probabilistic markov chain sequences are learnt from weather conditions
 for each month at each station found in the input data.
 }
-\examples{
-\dontrun{head(create_markovchains(dt))}
-station       Date Mean_TemperatureC Mean_Humidity Mean_Sea_Level_PressurehPa Precipitationmm CloudCover year month day condition    mcs
-HBA 2016-09-01                12            57                       1012            0.51          3 2016     9   1      Rain     Cloudy
-HBA 2016-09-02                 9            76                       1013            0.00          5 2016     9   2    Cloudy       Rain
-HBA 2016-09-03                 8            84                       1005            0.25          5 2016     9   3      Rain       Rain
-HBA 2016-09-04                12            52                       1010            0.00          3 2016     9   4     Sunny       Rain
-HBA 2016-09-05                14            51                       1019            0.00          3 2016     9   5     Sunny      Sunny
-HBA 2016-09-06                14            53                       1022            0.00          4 2016     9   6    Cloudy       Rain
-}
 

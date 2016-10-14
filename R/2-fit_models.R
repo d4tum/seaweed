@@ -5,16 +5,14 @@
 #' weather conditions
 #' @details Probabilistic markov chain sequences are learnt from weather conditions
 #' for each month at each station found in the input data.
-#' @examples
-#' \dontrun{head(create_markovchains(dt))}
-#' station       Date Mean_TemperatureC Mean_Humidity Mean_Sea_Level_PressurehPa Precipitationmm CloudCover year month day condition    mcs
-#' HBA 2016-09-01                12            57                       1012            0.51          3 2016     9   1      Rain     Cloudy
-#' HBA 2016-09-02                 9            76                       1013            0.00          5 2016     9   2    Cloudy       Rain
-#' HBA 2016-09-03                 8            84                       1005            0.25          5 2016     9   3      Rain       Rain
-#' HBA 2016-09-04                12            52                       1010            0.00          3 2016     9   4     Sunny       Rain
-#' HBA 2016-09-05                14            51                       1019            0.00          3 2016     9   5     Sunny      Sunny
-#' HBA 2016-09-06                14            53                       1022            0.00          4 2016     9   6    Cloudy       Rain
 #' @export
+#' @importFrom markovchain createSequenceMatrix
+#' @importFrom markovchain markovchainFit
+#' @importFrom markovchain markovchainSequence
+#' @importFrom data.table data.table
+#' @importFrom data.table :=
+#' @importFrom data.table .BY
+#' @importFrom data.table set
 create_markovchains <- function(dt) {
   mcs <- character()
 
@@ -51,17 +49,12 @@ create_markovchains <- function(dt) {
 #' observed temperature, pressure and humidity over the month for each station.
 #' In the event of no monthly variation, a mertic is imputed from the complete
 #' range of observations.
-#' @examples
-#' \dontrun{head(compute_pdfs(dt))}
-#' condition station month t_mean  t_sd   p_mean     p_sd   h_mean     h_sd
-#' Cloudy   HBA     9 11.35714 2.239751 1014.429 5.079586 69.35714 9.919733
-#' Rain     HBA     9 11.10000 2.330951 1006.000 7.630349 73.60000 9.788883
-#' Sunny    HBA     9 11.66667 1.505545 1012.667 9.521905 60.50000 9.731393
-#' Cloudy   MEL     9 12.11111 1.536591 1017.333 8.000000 69.88889 4.512329
-#' Rain     MEL     9 11.10000 1.071153 1010.800 8.401754 78.20000 8.294577
-#' Sunny    MEL     9 17.00000 5.000000 1019.000 7.000000 61.00000 9.000000
 #' @export
+#' @importFrom data.table set
+#' @importFrom stats sd
 compute_pdfs <- function(dt) {
+
+
   pdfs <- data.table(
     condition = character(),
     station = character(),
