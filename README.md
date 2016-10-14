@@ -1,8 +1,7 @@
-[![Travis-CI Build Status](https://travis-ci.org/qubz/seaweed.svg?branch=travis-ci)](https://travis-ci.org/qubz/seaweed)
+[![Travis-CI Build Status](https://travis-ci.org/qubz/seaweed.svg?branch=master)](https://travis-ci.org/qubz/seaweed)
 # seaweed
 Seaweed is an R package that generates plausible and 'semi-realistic' synthetic weather data. Seaweed approximates monthly weather conditions at ten well known Australian locations. Weather conditions are estimated through Markov Chain models learnt from sequences within historical data. Temperature, pressure and humidity are estimated through random sampling using a statistical model of the probable ranges of monthly weather conditions at each location.
 
-## Installation
 Seaweed was developed using R version 3.3.1 (2016-06-21) -- "Bug in Your Hair" on an x86_64 Mac running OS X El Capitan Version 10.11.6. The seaweed algorithm was built with the following packages:
 
 ```r
@@ -14,15 +13,13 @@ readr (>= 1.0.0),
 stats (>= 3.3.1),
 weatherData (>= 0.4.5)
 ```
-
+## Installation
 To install seaweed run these two commands one at a time from the R console:
-
 ```r
 install.packages("devtools")
 devtools::install_github("qubz/seaweed")
 ```
 ## Example
-
 Once seaweed is installed, copy and paste the code below into your favourite R tool.
 
 ```r
@@ -36,7 +33,7 @@ dt <- generate_metrics(dt, pdfs)
 dt <- format_output(dt)
 write_output(dt)
 ```
-The last function in the code above ```write_output``` will write a file to the working directory containing a dataset of seaweed generated data similar to the sample shown below.
+The last function ```write_output``` in the snippet above will write a file to the working directory containing a dataset of seaweed generated data similar to the sample shown below.
 ```r
 ADL|-34.57,138.31,4|2016-01-01T22:48:44Z|Sunny|19.9|1011.8|35
 ASP|-23.48,133.54,541|2016-01-01T00:08:16Z|Cloudy|28.9|1013.1|27
