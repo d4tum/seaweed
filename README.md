@@ -46,7 +46,7 @@ MEL|-37.40,144.49,141|2016-01-01T13:40:50Z|Rain|21.4|1021.1|37
 PER|-31.56,115.59,13|2016-01-01T16:26:05Z|Sunny|23.9|1012.2|55
 SYD|-33.57,151.10,3|2016-01-01T13:48:08Z|Cloudy|24.8|1017.8|68
 ```
-## Testing, Documentation and Final Words
+## Testing and documentation
 The code was tested using Hadley Wickham's ```testthat``` R package. To re-execute test cases, clone or download the repo and refer to the instructions here - http://r-pkgs.had.co.nz/tests.html.
 Documentation for package functions are available through the Help tab of RStudio and within the source itself.
 
