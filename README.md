@@ -8,32 +8,22 @@ Seaweed was developed using R version 3.3.1 (2016-06-21) -- "Bug in Your Hair" o
 ```r
 curl (>= 2.1),
 data.table (>= 1.9.7),
-devtools (>= 1.12.0),
 lubridate (>= 1.6.0),
 markovchain (>= 0.6.5.1),
 readr (>= 1.0.0),
-weatherData (>= 0.4.5),
+stats (>= 3.3.1),
+weatherData (>= 0.4.5)
 ```
 
-They should be installed through an R console executing the following sequence of commands one line at a time:
+To install seaweed run these two commands one at a time from the R console:
 
 ```r
 install.packages("devtools")
-install.packages("data.table", type = "source", repos = "http://Rdatatable.github.io/data.table")
-install.packages("curl")
-install.packages("lubridate")
-install.packages("markovchain")
-install.packages("readr")
-devtools::install_github("Ram-N/weatherData")
-```
-After successfully satisfying the above dependencies, execute the following to install seaweed:
-
-```r
 devtools::install_github("qubz/seaweed")
 ```
 ## Example
 
-Once seaweed is installed, copy and paste the code below into your favourite R tool. Make sure you __change the path__ in ```write_delim``` to a suitable location __before you run the code__.
+Once seaweed is installed, copy and paste the code below into your favourite R tool.
 
 ```r
 library(seaweed)
@@ -44,12 +34,9 @@ dt <- create_markovchains(dt)
 pdfs <- compute_pdfs(dt)
 dt <- generate_metrics(dt, pdfs)
 dt <- format_output(dt)
-
-write_delim(dt, "<your own path>/syntheic_weather_data.dat",
-            delim = "|",
-            col_names = F)
+write_output(dt)
 ```
-The file created will contain a dataset of synthetic Australian weather data similar to the sample shown below -
+The last function in the code above ```write_output``` will write a file to the working directory containing a dataset of seaweed generated data similar to the sample shown below.
 ```r
 ADL|-34.57,138.31,4|2016-01-01T22:48:44Z|Sunny|19.9|1011.8|35
 ASP|-23.48,133.54,541|2016-01-01T00:08:16Z|Cloudy|28.9|1013.1|27
@@ -63,7 +50,7 @@ PER|-31.56,115.59,13|2016-01-01T16:26:05Z|Sunny|23.9|1012.2|55
 SYD|-33.57,151.10,3|2016-01-01T13:48:08Z|Cloudy|24.8|1017.8|68
 ```
 ## Testing, Documentation and Final Words
-The code was tested using Hadley Wickham's ```testthat``` R package. To re-execute test cases, clone or download the repo and refer to the instructions here - http://r-pkgs.had.co.nz/tests.html. 
+The code was tested using Hadley Wickham's ```testthat``` R package. To re-execute test cases, clone or download the repo and refer to the instructions here - http://r-pkgs.had.co.nz/tests.html.
 Documentation for package functions are available through the Help tab of RStudio and within the source itself.
 
 海藻はおいしいです

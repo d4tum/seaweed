@@ -1,4 +1,4 @@
-context("Formatting output of synthetic weather data to fit the specs")
+context("Formatting output of synthetic weather data")
 
 test_that("Output is correct", {
   # All variables
