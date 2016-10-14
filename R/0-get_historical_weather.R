@@ -23,7 +23,6 @@
 #' @importFrom lubridate month
 #' @importFrom lubridate date
 #' @importFrom lubridate rollback
-#' @importFrom curl has_internet
 #' @importFrom weatherData getWeatherForDate
 get_weather <- function(m, download) {
   if (!download) {
@@ -36,7 +35,7 @@ get_weather <- function(m, download) {
     dt <- subset(dt, month(date(Date)) <= m)
     dt
 
-  } else if (has_internet()) {
+  } else if (curl::has_internet()) {
     # Download a fresh batch
     # Set up weather station ICAO codes and give them 3 letter IATA names
     station_codes <-
