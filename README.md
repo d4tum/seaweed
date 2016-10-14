@@ -20,7 +20,7 @@ install.packages("devtools")
 devtools::install_github("qubz/seaweed")
 ```
 ## Example
-Once seaweed is installed, copy and paste the code below into your favourite R tool.
+Once seaweed is installed, copy, paste and run the code below in your favourite R tool.
 
 ```r
 library(seaweed)
