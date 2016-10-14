@@ -14,9 +14,10 @@ stats (>= 3.3.1),
 weatherData (>= 0.4.5)
 ```
 ## Installation
-To install seaweed run these two commands one at a time from the R console:
+To install seaweed run these three commands in sequence one at a time from the R console:
 ```r
 install.packages("devtools")
+install.packages("curl")
 devtools::install_github("qubz/seaweed")
 ```
 ## Example
